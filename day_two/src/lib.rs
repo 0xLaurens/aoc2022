@@ -1,7 +1,7 @@
 pub fn process_part_one(input: &str) -> i32 {
     let result = input
         .lines()
-        .map(|s| s.split_once(" ").unwrap())
+        .map(|s| s.chars())
         .fold(0, |points, (elf, me)| match (elf, me) {
             ("A", "X") => points + (3 + 1),
             ("A", "Y") => points + (6 + 2),
@@ -34,7 +34,7 @@ pub fn process_part_two(input: &str) -> i32 {
 
             ("C", "X") => points + (0 + 2),
             ("C", "Y") => points + (3 + 3),
-            ("C", "Z") => points + (1 + 6),
+            ("C", "Z") => points + (6 + 1),
             _ => points
         });
     result
