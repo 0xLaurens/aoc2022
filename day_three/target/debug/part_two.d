@@ -1,0 +1,1 @@
+D:\dev\pers\2022\aoc2022\day_three\target\debug\part_two.exe: D:\dev\pers\2022\aoc2022\day_three\src\bin\input.txt D:\dev\pers\2022\aoc2022\day_three\src\bin\part_two.rs D:\dev\pers\2022\aoc2022\day_three\src\lib.rs
