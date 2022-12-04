@@ -1,13 +1,13 @@
-pub fn process_part_one(input: &str) -> u8 {
+pub fn process_part_one(input: &str) -> usize {
     input.lines()
         .map(|x| { x.split([',', '-']).map(|x| x.parse::<u8>().unwrap()).collect::<Vec<u8>>() })
-        .filter(|x| (x[0] >= x[2] && x[1] <= x[3]) || (x[2] >= x[0] && x[3] <= x[1])).count() as u8
+        .filter(|x| (x[0] >= x[2] && x[1] <= x[3]) || (x[2] >= x[0] && x[3] <= x[1])).count()
 }
 
-pub fn process_part_two(input: &str) -> u8 {
+pub fn process_part_two(input: &str) -> usize {
     input.lines()
         .map(|x| { x.split([',', '-']).map(|x| x.parse::<u8>().unwrap()).collect::<Vec<u8>>() })
-        .filter(|x| x[0] <= x[3] && x[2] <= x[1]).count() as u8
+        .filter(|x| x[0] <= x[3] && x[2] <= x[1]).count()
 }
 
 #[cfg(test)]
