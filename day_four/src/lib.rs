@@ -1,29 +1,13 @@
-pub fn process_part_one(input: &str) -> i32 {
+pub fn process_part_one(input: &str) -> u8 {
     input.lines()
-        .map(|x| {
-            x.split(",")
-                .flat_map(|range| range.split("-"))
-                .map(|s| s.parse::<i32>().unwrap())
-                .collect::<Vec<i32>>()
-        })
-        .filter(|vec| {
-            (vec[0] >= vec[2] && vec[1] <= vec[3]) || (vec[2] >= vec[0] && vec[3] <= vec[1])
-        })
-        .count() as i32
+        .map(|x| { x.split([',', '-']).map(|x| x.parse::<u8>().unwrap()).collect::<Vec<u8>>() })
+        .filter(|x| (x[0] >= x[2] && x[1] <= x[3]) || (x[2] >= x[0] && x[3] <= x[1])).count() as u8
 }
 
-pub fn process_part_two(input: &str) -> i32 {
+pub fn process_part_two(input: &str) -> u8 {
     input.lines()
-        .map(|x| {
-            x.split(",")
-                .flat_map(|range| range.split("-"))
-                .map(|s| s.parse::<i32>().unwrap())
-                .collect::<Vec<i32>>()
-        })
-        .filter(|vec| {
-            vec[0] <= vec[3] && vec[2] <= vec[1]
-        })
-        .count() as i32
+        .map(|x| { x.split([',', '-']).map(|x| x.parse::<u8>().unwrap()).collect::<Vec<u8>>() })
+        .filter(|x| x[0] <= x[3] && x[2] <= x[1]).count() as u8
 }
 
 #[cfg(test)]
