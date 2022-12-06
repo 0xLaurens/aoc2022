@@ -53,6 +53,23 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="Cargo.Test lib::tests">
+    <configuration name="Expand day_five" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="expand --lib --color=always --theme=Dracula --tests" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run part_one" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="run --package day_five --bin part_one" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -121,30 +138,13 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test tests::part_two_test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package day_five --lib tests::part_two_test -- --exact" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Test lib::tests" />
         <item itemvalue="Cargo.Run part_two" />
-        <item itemvalue="Cargo.Test tests::part_two_test" />
         <item itemvalue="Cargo.Run part_one" />
         <item itemvalue="Cargo.Test tests::part_one_test" />
+        <item itemvalue="Cargo.Expand day_five" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +171,6 @@
       <workItem from="1670230932139" duration="1672000" />
       <workItem from="1670236283830" duration="1494000" />
       <workItem from="1670265999332" duration="1138000" />
-      <workItem from="1670314700030" duration="3118000" />
     </task>
     <servers />
   </component>
@@ -188,6 +187,22 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/lib.rs</url>
+          <line>78</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/lib.rs</url>
+          <line>63</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
