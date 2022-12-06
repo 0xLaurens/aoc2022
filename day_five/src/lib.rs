@@ -1,5 +1,4 @@
 use itertools::Itertools;
-use regex::Regex;
 
 fn parse_crates(input: &str) -> Vec<Vec<char>> {
     let mut stacks = Vec::<Vec<char>>::with_capacity(9);
@@ -23,9 +22,10 @@ fn parse_crates(input: &str) -> Vec<Vec<char>> {
 fn parse_moves(input: &str) -> Vec<(usize, usize, usize)> {
     input
         .split_ascii_whitespace()
-        .skip(1).step_by(2).map(|num| num.parse().unwrap()).chunks(3).into_iter()
-        .filter();
-    instructions
+        .skip(1).step_by(2).filter_map(|num| num.parse().ok())
+        .collect::<Vec<usize>>()
+        .chunks(3)
+        .map(|x| (x[0], x[1], x[2])).collect::<Vec<(_,_,_)>>()
 }
 
 
@@ -33,6 +33,8 @@ pub fn process_part_one(input: &str) -> String {
     let (crates, moves) = input.split_once("\n\r").unwrap();
     let mut crates = parse_crates(crates);
     let moves = parse_moves(moves);
+
+    println!("{:?}", moves);
 
     for (count, from, to) in moves {
         for _ in 0..count {
